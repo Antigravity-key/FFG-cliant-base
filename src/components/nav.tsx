@@ -34,7 +34,7 @@ export function TopNav({
     <header className="sticky top-0 z-30 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto max-w-6xl flex items-center justify-between gap-3 px-3 sm:px-6 h-14">
         <Link href="/calendar" className="font-semibold tracking-tight">
-          firegym
+          Fire Fit Gym
         </Link>
         <nav className="hidden md:flex items-center gap-1">
           {items.map((item) => {

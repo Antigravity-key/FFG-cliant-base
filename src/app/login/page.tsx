@@ -68,7 +68,7 @@ export default function LoginPage() {
     <main className="min-h-dvh flex items-center justify-center px-6 py-10">
       <Card className="w-full max-w-sm p-6 space-y-5">
         <div className="space-y-1 text-center">
-          <h1 className="text-2xl font-semibold tracking-tight">firegym</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">Fire Fit Gym</h1>
           <p className="text-sm text-muted-foreground">
             パーソナルジム顧客・セッション・売上管理
           </p>

@@ -8,7 +8,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "firegym",
+  title: "Fire Fit Gym",
   description: "パーソナルジム顧客・セッション・売上管理",
 };
 

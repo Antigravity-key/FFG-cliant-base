@@ -1,6 +1,6 @@
-# firegym
+# Fire Fit Gym
 
-パーソナルジムの顧客・セッション・売上を管理するWebアプリ。
+パーソナルジム「Fire Fit Gym」向けの顧客・セッション・売上管理Webアプリ。
 Next.js 16 + Supabase + FullCalendar。
 
 **利用者向けの使い方ガイドは [GUIDE.md](GUIDE.md) を参照してください。** 本READMEは開発者向けのセットアップ手順です。
