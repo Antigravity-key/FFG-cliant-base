@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { Button, Card, Input, Label, PageHeader, Select, Textarea } from "@/components/ui";
 import { updateCustomer } from "../../actions";
+import { DeleteCustomerButton } from "./delete-button";
 
 export default async function EditCustomerPage({
   params,
@@ -64,7 +65,20 @@ export default async function EditCustomerPage({
             <Button type="submit">保存</Button>
           </div>
         </form>
+
+        <hr className="my-6 border-border" />
+
+        <div className="flex flex-col gap-1.5">
+          <h3 className="text-sm font-semibold text-danger">危険な操作</h3>
+          <p className="text-xs text-muted-foreground">
+            この顧客レコードをシステムから完全に削除します。セッション履歴やチケット購入歴がある場合は削除できません。
+          </p>
+          <div className="pt-2">
+            <DeleteCustomerButton id={id} />
+          </div>
+        </div>
       </Card>
     </div>
   );
 }
+

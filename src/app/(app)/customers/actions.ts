@@ -55,3 +55,22 @@ export async function updateCustomer(id: string, formData: FormData) {
   revalidatePath("/customers");
   revalidatePath(`/customers/${id}`);
 }
+
+export async function deleteCustomer(id: string) {
+  const supabase = await createClient();
+
+  const { error } = await supabase.from("customers").delete().eq("id", id);
+
+  if (error) {
+    if (error.code === "23503") {
+      throw new Error(
+        "この顧客はセッション履歴や購入済みチケットが存在するため削除できません。ステータスを「退会」等に変更してください。"
+      );
+    }
+    throw error;
+  }
+
+  revalidatePath("/customers");
+  redirect("/customers");
+}
+
